@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Issue Tracker</title>
+</head>
+<body>
+
+    <header>
+        <h1>Issue Tracker</h1>
+    </header>
+
+    <div class="container">
+        <section id="createIssue">
+            <h2>Create Issue</h2>
+            <!-- Form for creating a new issue -->
+            <form id="createIssueForm">
+                <label for="issueTitle">Title:</label>
+                <input type="text" id="issueTitle" required>
+
+                <label for="issueDescription">Description:</label>
+                <textarea id="issueDescription" rows="4" required></textarea>
+
+                <label for="assignee">Assignee:</label>
+                <select id="assignee">
+                    <option value="user1">User 1</option>
+                    <option value="user2">User 2</option>
+                    <!-- Add more users as needed -->
+                </select>
+
+                <label for="priority">Priority:</label>
+                <select id="priority">
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+
+                <label for="attachment">Attachment:</label>
+                <input type="file" id="attachment">
+
+                <button type="button" id="btn"onclick="createIssue()">Create Issue</button>
+            </form>
+        </section>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div>
+                
+            </div>
+            <section id="viewIssues">
+                <h2><a href="issues.html">View Issues</a></h2>
+                <!-- Display issues here -->
+                <ul id="issueList"></ul>
+            </section>
+        </div>
+
+        
+        
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
